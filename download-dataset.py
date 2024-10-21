@@ -27,12 +27,14 @@ def download_file(url, output_file):
                 if chunk:
                     out_file.write(chunk)
 
+
 def extract_zip(zip_file, extract_to):
     """Extract a zip file to the specified directory"""
     print(f"Extracting {zip_file}...")
     with zipfile.ZipFile(zip_file, 'r') as zip_ref:
         zip_ref.extractall(extract_to)
     print(f"Extracted to {extract_to}")
+
 
 def extract_tar(tar_file, extract_to):
     """Extract a tar.gz file to the specified directory"""
@@ -41,12 +43,14 @@ def extract_tar(tar_file, extract_to):
         tar_ref.extractall(extract_to)
     print(f"Extracted to {extract_to}")
 
+
 def download_sift1m(output_dir):
     """Download and extract the SIFT1M dataset"""
     url = "ftp://ftp.irisa.fr/local/texmex/corpus/siftsmall.tar.gz"
     output_file = os.path.join(output_dir, "siftsmall.tar.gz")
     download_file(url, output_file)
     extract_tar(output_file, output_dir)
+
 
 def download_glove(output_dir):
     """Download and extract the GloVe dataset"""
@@ -55,11 +59,13 @@ def download_glove(output_dir):
     download_file(url, output_file)
     extract_zip(output_file, output_dir)
 
+
 def download_deep1b(output_dir):
     """Download and extract the DEEP1B dataset"""
     url = "http://ann-benchmarks.com/deep-image-96-angular.hdf5"
     output_file = os.path.join(output_dir, "deep-image-96-angular.hdf5")
     download_file(url, output_file)
+
 
 def download_fasttext(output_dir):
     """Download FastText word embeddings"""
@@ -67,6 +73,7 @@ def download_fasttext(output_dir):
     output_file = os.path.join(output_dir, "wiki.en.zip")
     download_file(url, output_file)
     extract_zip(output_file, output_dir)
+
 
 # def download_sentence_embeddings(output_dir, model_name="paraphrase-MiniLM-L6-v2"):
 #     """Download Sentence embeddings using Sentence Transformers"""
@@ -81,6 +88,7 @@ def download_fasttext(output_dir):
 
 #     np.save(os.path.join(output_dir, f"{model_name}_embeddings.npy"), embeddings)
 #     print(f"Sentence embeddings saved to {output_dir}")
+
 
 def download_dataset(dataset_name, output_dir):
     """Download a dataset by name"""
@@ -98,6 +106,7 @@ def download_dataset(dataset_name, output_dir):
     #     download_sentence_embeddings(output_dir)
     else:
         print(f"Unknown dataset {dataset_name}. Please choose 'sift1m', 'glove', 'deep1b', 'fasttext', or 'sentence_embeddings'.")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download ANN datasets for testing approximate nearest neighbor methods")
