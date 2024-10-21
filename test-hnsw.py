@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import numpy as np
 import argparse
-from tqdm import tqdm
-# from tqdm import tqdm_notebook as tqdm
-from heapq import heappush, heappop
-import random
 import itertools
+import random
+# from tqdm import tqdm_notebook as tqdm
+from heapq import heappop, heappush
+
+import numpy as np
+from tqdm import tqdm
+
 random.seed(108)
-from hnsw import HNSW
-from hnsw import l2_distance, heuristic
+from hnsw import HNSW, heuristic, l2_distance
 
 
 def brute_force_knn_search(distance_func, k, q, data):

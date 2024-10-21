@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os
-import requests
 import argparse
-import zipfile
+import os
 import tarfile
+import urllib.request
+import zipfile
+
 import numpy as np
+import requests
+
 # from sentence_transformers import SentenceTransformer
 
-import urllib.request
-import requests
 
 def download_file(url, output_file):
     if url.startswith("ftp://"):

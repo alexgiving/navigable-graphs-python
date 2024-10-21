@@ -1,10 +1,12 @@
 #!python3
-import sys
-import numpy as np
-import time
 import random
-from math import log2
+import sys
+import time
 from heapq import heapify, heappop, heappush, heapreplace, nlargest, nsmallest
+from math import log2
+
+import numpy as np
+
 
 def l2_distance(a, b):
     return np.linalg.norm(a - b)
