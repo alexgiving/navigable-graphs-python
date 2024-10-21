@@ -78,14 +78,14 @@ def download_fasttext(output_dir):
 #         "We are testing approximate nearest neighbor search using text embeddings.",
 #     ]
 #     embeddings = model.encode(sentences)
-    
+
 #     np.save(os.path.join(output_dir, f"{model_name}_embeddings.npy"), embeddings)
 #     print(f"Sentence embeddings saved to {output_dir}")
 
 def download_dataset(dataset_name, output_dir):
     """Download a dataset by name"""
     os.makedirs(output_dir, exist_ok=True)
-    
+
     if dataset_name == 'sift1m':
         download_sift1m(output_dir)
     elif dataset_name == 'glove':
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     # parser.add_argument('--dataset', type=str, default='sift1m', help="Choose dataset: 'sift1m', 'glove', 'deep1b', 'fasttext', 'sentence_embeddings'")
     parser.add_argument('--dataset', type=str, default='sift1m', help="Choose dataset: 'sift1m', 'glove', 'deep1b', 'fasttext'")
     parser.add_argument('--output_dir', type=str, default='./datasets', help="Directory to save the dataset")
-    
+
     args = parser.parse_args()
-    
+
     download_dataset(args.dataset, args.output_dir)
