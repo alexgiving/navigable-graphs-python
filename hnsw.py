@@ -199,21 +199,3 @@ class HNSW:
                 for src, neighborhood in graph.items():
                     for dst, dist in neighborhood:
                         f.write(f'{src} {dst}\n')
-
-
-
-# n = int(sys.argv[1]) # graph size
-# dim = int(sys.argv[2]) # vector dimensionality
-# m = int(sys.argv[3]) # avg number of vertex
-# m0 = int(sys.argv[3]) # avg number of vertex for the lower layer
-
-# hnsw = HNSW( distance_func=l2_distance, m=5, m0=7, ef=10, ef_construction=30,  neighborhood_construction = heuristic)
-
-# k =5
-# dim = 2
-# n = 1000
-# data = np.array(np.float32(np.random.random((n, dim))))
-
-
-# for x in data:
-#     hnsw.add(x)

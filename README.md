@@ -8,6 +8,9 @@ mkdir -p datasets
 pushd datasets
     wget ftp://ftp.irisa.fr/local/texmex/corpus/siftsmall.tar.gz -o dataset.tar.gz
     tar -xvf siftsmall.tar.gz
+
+    wget ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz
+    tar -xvf sift.tar.gz
 popd
 ```
 
