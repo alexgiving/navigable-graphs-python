@@ -35,6 +35,9 @@ def plot_comparison(log_1_results, log_2_results, output_file):
     plt.plot(avg_calcs_1, recalls_1, color='blue', label='Original', alpha=0.6)
     plt.plot(avg_calcs_2, recalls_2, color='orange', label='Modified', alpha=0.6)
 
+    print('Log_1\n' + '\n'.join([f'{recall} | {calc} |' for recall, calc in zip(recalls_1, avg_calcs_1)]))
+    print('Log_2\n' +'\n'.join([f'{recall} | {calc} |' for recall, calc in zip(recalls_2, avg_calcs_2)]))
+
     # Adding labels and title
     plt.title('Comparison of Algorithm Performance')
     plt.ylabel('Average Recall')
