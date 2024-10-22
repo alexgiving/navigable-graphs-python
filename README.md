@@ -1,6 +1,19 @@
 # Navigable Graphs Python
 Python based research tool for studying navigable graphs for nearest neighbour search
 
+
+Download dataset
+```bash
+mkdir -p datasets
+pushd datasets
+    wget ftp://ftp.irisa.fr/local/texmex/corpus/siftsmall.tar.gz -o dataset.tar.gz
+    tar -xvf siftsmall.tar.gz
+
+    wget ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz
+    tar -xvf sift.tar.gz
+popd
+```
+
 Using the SIFT dataset:
 ```
 python navigable-graphs.py --dataset sift
