@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p results
+
 ORIGIN_PATH="results/results_orig_10k.log"
 MODIFIED_PATH="results/results_modified_10k.log"
 ASSET_PATH="assets"
