@@ -49,7 +49,7 @@ def plot_comparison(log_1_results, log_2_results, output_file):
     plt.grid(True)
 
     # Save the plot as an image file
-    plt.savefig(output_file)
+    plt.savefig(output_file, bbox_inches='tight')
     plt.close()
 
 
